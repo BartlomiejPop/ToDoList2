@@ -1,0 +1,112 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 80vh;
+	font-family: "Montserrat", sans-serif;
+	background-color: #f9f9f9;
+}
+
+main {
+	border-radius: 5px;
+	-webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+	-moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+	box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+}
+
+.top-section {
+	padding: 60px 50px;
+	color: #fff;
+	background-color: rgb(49, 77, 235);
+}
+
+.task-creation {
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-between;
+	gap: 30px;
+}
+
+h1 {
+	text-align: center;
+	font-size: 40px;
+}
+
+input {
+	width: 800px;
+	padding: 10px 10px;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+	font-size: 16px;
+}
+
+.task-creation-btn {
+	padding: 0 25px;
+	border: none;
+	border-radius: 5px;
+	font-size: 18px;
+	cursor: pointer;
+	background-color: #fff;
+}
+
+.bottom-section {
+	min-height: 100px;
+	background-color: #fff;
+	padding: 20px 30px;
+}
+
+h2 {
+	padding-top: 10px;
+	text-align: center;
+	font-size: 25px;
+}
+
+.task {
+	display: flex;
+	justify-content: space-between;
+	padding: 12px 15px;
+	margin-top: 20px;
+	background-color: #efeded;
+	border-radius: 5px;
+}
+
+.task-name {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.edit-field {
+	display: flex;
+	gap: 20px;
+}
+
+.complete-btn {
+	border: none;
+	color: rgb(52, 52, 244);
+	font-size: 18px;
+	cursor: pointer;
+	background-color: transparent;
+}
+
+.edit-btn {
+	border: none;
+	color: rgb(10, 195, 13);
+	font-size: 18px;
+	cursor: pointer;
+	background-color: transparent;
+}
+
+.delete-btn {
+	border: none;
+	color: rgb(235, 9, 9);
+	font-size: 18px;
+	cursor: pointer;
+	background-color: transparent;
+}
