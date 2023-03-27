@@ -23,7 +23,8 @@ main {
 .top-section {
 	padding: 60px 50px;
 	color: #fff;
-	background-color: rgb(49, 77, 235);
+	border-radius: 8px 8px 0 0;
+	background-image: linear-gradient(340deg, #045de9 0%, #09c6f9 100%);
 }
 
 .task-creation {
@@ -58,6 +59,7 @@ h1 {
 
 .bottom-section {
 	min-height: 100px;
+	border-radius: 0 0 8px 8px;
 	background-color: #fff;
 	padding: 20px 30px;
 }
@@ -114,9 +116,21 @@ h2 {
 
 .edit-task-name {
 	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
 	width: 84%;
+	padding: 0 0 0 15px;
 	display: none;
-	background-color: inherit;
+	font-size: 16px;
+	font-weight: bold;
+	background-color: #e0efff;
+
 	border: none;
 	outline: none;
+}
+
+.task-completed {
+	background-color: #c8eda7;
+	color: green;
 }

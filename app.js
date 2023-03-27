@@ -1,4 +1,4 @@
-const inputEl = document.querySelector("input");
+const inputEl = document.querySelector(".new-task-name");
 const addTaskbtn = document.querySelector(".task-creation-btn");
 const completeBtns = document.getElementsByClassName(".complete-btn");
 const editBtn = document.querySelector(".edit-btn");
@@ -31,7 +31,7 @@ const addTask = () => {
 					</div>
 				`;
 		tasksSection.appendChild(newTask);
-
+		inputEl.value = "";
 		IDcounter++;
 	}
 };
@@ -39,10 +39,9 @@ const addTask = () => {
 const completeTask = (ID) => {
 	const taskToComplete = document.getElementById(ID);
 	const completedTaskName = taskToComplete.firstElementChild.nextElementSibling;
-	completedTaskName.style.textDecoration = "line-through";
-	console.log(completedTaskName);
-	taskToComplete.style.backgroundColor = " #c8eda7";
-	taskToComplete.style.color = "#11db47";
+	const checkIconCompleted = taskToComplete.lastElementChild;
+	checkIconCompleted.childNodes[1].childNodes[1].style.color = "green";
+	taskToComplete.classList.toggle("task-completed");
 };
 
 const deleteTask = (ID) => {
@@ -59,10 +58,13 @@ const editTask = (ID) => {
 	const taskToEdit = document.getElementById(ID);
 	const editInput = taskToEdit.firstElementChild;
 	editInput.style.display = "block";
+	// taskToEdit.style.backgroundColor = "#e0efff";
+	editInput.focus();
 	document.addEventListener("keyup", (event) => {
-		if (event.code === "Enter") {
+		if (event.code === "Enter" && editInput.value !== "") {
 			editInput.nextElementSibling.textContent = editInput.value;
 			editInput.style.display = "none";
+			// taskToEdit.style.backgroundColor = "#eeefed";
 		}
 	});
 };
