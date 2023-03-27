@@ -134,3 +134,7 @@ h2 {
 	background-color: #c8eda7;
 	color: green;
 }
+
+.div-edit-active{
+	background-color: #e0efff;
+}

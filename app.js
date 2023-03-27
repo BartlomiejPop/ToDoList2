@@ -40,7 +40,9 @@ const completeTask = (ID) => {
 	const taskToComplete = document.getElementById(ID);
 	const completedTaskName = taskToComplete.firstElementChild.nextElementSibling;
 	const checkIconCompleted = taskToComplete.lastElementChild;
-	checkIconCompleted.childNodes[1].childNodes[1].style.color = "green";
+	checkIconCompleted.childNodes[1].childNodes[1].classList.toggle(
+		"task-completed"
+	);
 	taskToComplete.classList.toggle("task-completed");
 };
 
@@ -58,12 +60,13 @@ const editTask = (ID) => {
 	const taskToEdit = document.getElementById(ID);
 	const editInput = taskToEdit.firstElementChild;
 	editInput.style.display = "block";
-	// taskToEdit.style.backgroundColor = "#e0efff";
+
 	editInput.focus();
 	document.addEventListener("keyup", (event) => {
 		if (event.code === "Enter" && editInput.value !== "") {
 			editInput.nextElementSibling.textContent = editInput.value;
 			editInput.style.display = "none";
+
 			// taskToEdit.style.backgroundColor = "#eeefed";
 		}
 	});
