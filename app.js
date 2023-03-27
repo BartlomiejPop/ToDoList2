@@ -58,7 +58,6 @@ const clearInput = () => {
 const editTask = (ID) => {
 	const taskToEdit = document.getElementById(ID);
 	const editInput = taskToEdit.firstElementChild;
-	editInput.focus();
 	editInput.style.display = "block";
 	document.addEventListener("keyup", (event) => {
 		if (event.code === "Enter") {
